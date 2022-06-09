@@ -29,5 +29,25 @@ namespace HMCon3D
 				return true;
 			}
 		}
+
+		protected override bool ExportFile(string path, ExportJob job)
+		{
+			var model = ModelData.Create(job.data);
+			using (var stream = BeginWriteStream(path))
+			{
+				//TODO: use single library, perhaps look for a better alternative?
+				if (HMCon3DModule.exported3dFiles < 50)
+				{
+					new Aspose3DExporter(model).WriteFile(stream, this);
+				}
+				else
+				{
+					ConsoleOutput.WriteWarning("Aspose3D's export limit was reached! Attempting to export using Assimp, which may throw an error.");
+					new Assimp3DExporter(model).WriteFile(stream, this);
+				}
+				HMCon3DModule.exported3dFiles++;
+			}
+			return true;
+		}
 	}
 }
