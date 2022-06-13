@@ -10,8 +10,6 @@ namespace HMCon3D {
 	[ModuleInfo("3DModule", "3D exporter v1.0")]
 	public class HMCon3DModule : HMConModule {
 
-		public static int exported3dFiles = 0;
-
 		public override HMConCommandHandler GetCommandHandler() {
 			return null;
 		}
@@ -19,7 +17,9 @@ namespace HMCon3D {
 		public override void RegisterFormats(List<FileFormat> registry)
 		{
 			registry.Add(new Autodesk3DSFormat());
-			registry.Add(new FBXFormat());
+			registry.Add(new WavefrontOBJFormat());
+			registry.Add(new STLFormat());
+			registry.Add(new PLYFormat());
 		}
 	}
 }
