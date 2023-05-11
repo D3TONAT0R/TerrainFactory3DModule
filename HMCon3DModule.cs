@@ -1,16 +1,19 @@
 ﻿using HMCon;
-using HMCon.Export;
 using HMCon.Formats;
-using HMCon.Import;
-using System;
 using System.Collections.Generic;
 
-namespace HMCon3D {
+namespace HMCon3D
+{
 
-	[ModuleInfo("3DModule", "3D exporter v1.0")]
-	public class HMCon3DModule : HMConModule {
+	public class HMCon3DModule : HMConModule
+	{
 
-		public override HMConCommandHandler GetCommandHandler() {
+		public override string ModuleID => "3DModule";
+		public override string ModuleName => "3D Model Exporter";
+		public override string ModuleVersion => "1.0";
+
+		public override HMConCommandHandler GetCommandHandler()
+		{
 			return null;
 		}
 
