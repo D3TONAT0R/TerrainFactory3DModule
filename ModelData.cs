@@ -13,8 +13,8 @@ namespace HMCon3D
 		public static ModelData Create(HeightData source)
 		{
 			var model = new ModelData();
-			int sizeX = source.GridWidth - 1;
-			int sizeY = source.GridHeight - 1;
+			int sizeX = source.GridLengthX - 1;
+			int sizeY = source.GridLengthY - 1;
 			int splitX = (int)Math.Ceiling(sizeX / 128f);
 			int splitY = (int)Math.Ceiling(sizeY / 128f);
 			int y = 0;

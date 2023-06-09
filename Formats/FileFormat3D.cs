@@ -27,11 +27,11 @@ namespace HMCon3D
 			}
 		}
 
-		protected override bool ExportFile(string path, ExportJob job)
+		protected override bool ExportFile(string path, ExportTask task)
 		{
 			using (var stream = BeginWriteStream(path))
 			{
-				var scene = Assimp3DExporter.CreateAssimpScene(ModelData.Create(job.data));
+				var scene = Assimp3DExporter.CreateAssimpScene(ModelData.Create(task.data));
 				Assimp3DExporter.ExportToStream(stream, scene, Extension);
 			}
 			return true;
