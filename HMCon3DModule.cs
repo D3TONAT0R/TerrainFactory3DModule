@@ -12,11 +12,6 @@ namespace HMCon3D
 		public override string ModuleName => "3D Model Exporter";
 		public override string ModuleVersion => "1.0";
 
-		public override HMConCommandHandler GetCommandHandler()
-		{
-			return null;
-		}
-
 		public override void RegisterFormats(List<FileFormat> registry)
 		{
 			registry.Add(new Autodesk3DSFormat());
