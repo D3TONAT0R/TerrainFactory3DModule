@@ -43,7 +43,7 @@ namespace HMCon3D
 				for (int x = xMin; x <= xMax; x++)
 				{
 					float f = source.GetHeight(x, y);
-					if (f != source.nodata_value)
+					if (f != source.nodataValue)
 					{
 						Vector3 vec = new Vector3(-x * source.cellSize, source.GetHeight(x, y), y * source.cellSize);
 						points[x - xMin, y - yMin] = vec;
