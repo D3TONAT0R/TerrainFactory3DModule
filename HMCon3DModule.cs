@@ -1,14 +1,14 @@
-﻿using HMCon;
-using HMCon.Formats;
+﻿using TerrainFactory;
+using TerrainFactory.Formats;
 using System.Collections.Generic;
 
-namespace HMCon3D
+namespace TerrainFactory.Modules.ThreeD
 {
 
-	public class HMCon3DModule : HMConModule
+	public class TerrainFactory3DModule : TerrainFactoryModule
 	{
 
-		public override string ModuleID => "3DModule";
+		public override string ModuleID => "3DExporter";
 		public override string ModuleName => "3D Model Exporter";
 		public override string ModuleVersion => "1.0";
 

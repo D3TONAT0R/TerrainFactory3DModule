@@ -1,14 +1,14 @@
-using HMCon;
-using HMCon.Export;
+using TerrainFactory;
+using TerrainFactory.Export;
 using Assimp;
 using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Numerics;
-using HMCon.Formats;
+using TerrainFactory.Formats;
 using Assimp.Unmanaged;
 
-namespace HMCon3D
+namespace TerrainFactory.Modules.ThreeD
 {
 	internal static class Assimp3DExporter
 	{

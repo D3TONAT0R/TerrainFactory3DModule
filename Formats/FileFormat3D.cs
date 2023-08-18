@@ -1,11 +1,11 @@
-﻿using HMCon;
-using HMCon.Export;
-using HMCon.Formats;
+﻿using TerrainFactory;
+using TerrainFactory.Export;
+using TerrainFactory.Formats;
 using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace HMCon3D
+namespace TerrainFactory.Modules.ThreeD
 {
 	public abstract class FileFormat3D : FileFormat
 	{

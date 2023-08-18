@@ -1,2 +1,2 @@
-# HMCon3DModule
- HeightmapConverter (HMCon) 3D Model Exporter Module
+# TerrainFactory3DModule
+ TerrainFactory 3D Model Exporter Module

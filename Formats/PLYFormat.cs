@@ -1,12 +1,12 @@
-﻿using HMCon;
-using HMCon.Export;
-using HMCon.Formats;
-using HMCon3D;
+﻿using TerrainFactory;
+using TerrainFactory.Export;
+using TerrainFactory.Formats;
+using TerrainFactory.Modules.ThreeD;
 using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace HMCon3D
+namespace TerrainFactory.Modules.ThreeD
 {
 	public class PLYFormat : FileFormat3D
 	{
