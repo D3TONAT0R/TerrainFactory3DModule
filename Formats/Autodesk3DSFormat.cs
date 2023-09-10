@@ -17,11 +17,11 @@ namespace TerrainFactory.Modules.ThreeD
 
 		public virtual int VertexLimit => 65535;
 
-		public override bool ValidateSettings(ExportSettings settings, HeightData data)
+		public override bool ValidateSettings(ExportSettings settings, ElevationData data)
 		{
-			if(data.GridCellCount >= VertexLimit)
+			if(data.TotalCellCount >= VertexLimit)
 			{
-				ConsoleOutput.WriteError($"Cannot export more than {VertexLimit} cells in a single 3DS model file. Current amount: {data.GridCellCount}");
+				ConsoleOutput.WriteError($"Cannot export more than {VertexLimit} cells in a single 3DS model file. Current amount: {data.TotalCellCount}");
 				ConsoleOutput.WriteError($"Reduce splitting interval or increase sub-sampling to successfully export 3DS files.");
 				return false;
 			}

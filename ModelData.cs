@@ -10,11 +10,11 @@ namespace TerrainFactory.Modules.ThreeD
 	{
 		public List<MeshData> meshes = new List<MeshData>();
 
-		public static ModelData Create(HeightData source)
+		public static ModelData Create(ElevationData source)
 		{
 			var model = new ModelData();
-			int sizeX = source.GridLengthX - 1;
-			int sizeY = source.GridLengthY - 1;
+			int sizeX = source.CellCountX - 1;
+			int sizeY = source.CellCountY - 1;
 			int splitX = (int)Math.Ceiling(sizeX / 128f);
 			int splitY = (int)Math.Ceiling(sizeY / 128f);
 			int y = 0;
@@ -33,7 +33,7 @@ namespace TerrainFactory.Modules.ThreeD
 			return model;
 		}
 
-		MeshData CreateMeshData(HeightData source, int xMin, int yMin, int xMax, int yMax)
+		MeshData CreateMeshData(ElevationData source, int xMin, int yMin, int xMax, int yMax)
 		{
 			Vector3[,] points = new Vector3[xMax - xMin + 1, yMax - yMin + 1];
 			MeshData mesh = new MeshData();
@@ -42,10 +42,10 @@ namespace TerrainFactory.Modules.ThreeD
 			{
 				for (int x = xMin; x <= xMax; x++)
 				{
-					float f = source.GetHeight(x, y);
-					if (f != source.nodataValue)
+					float f = source.GetElevationAtCell(x, y);
+					if (f != source.NoDataValue)
 					{
-						Vector3 vec = new Vector3(-x * source.cellSize, source.GetHeight(x, y), y * source.cellSize);
+						Vector3 vec = new Vector3(-x * source.CellSize, source.GetElevationAtCell(x, y), y * source.CellSize);
 						points[x - xMin, y - yMin] = vec;
 						if (!mesh.vertices.Contains(vec))
 						{
