@@ -12,12 +12,12 @@ namespace TerrainFactory.Modules.ThreeD
 		public override string ModuleName => "3D Model Exporter";
 		public override string ModuleVersion => "1.0";
 
-		public override void RegisterFormats(List<FileFormat> registry)
+		public override void Initialize()
 		{
-			registry.Add(new Autodesk3DSFormat());
-			registry.Add(new WavefrontOBJFormat());
-			registry.Add(new STLFormat());
-			registry.Add(new PLYFormat());
+			SupportedFormats.Add(new Autodesk3DSFormat());
+			SupportedFormats.Add(new WavefrontOBJFormat());
+			SupportedFormats.Add(new STLFormat());
+			SupportedFormats.Add(new PLYFormat());
 		}
 	}
 }

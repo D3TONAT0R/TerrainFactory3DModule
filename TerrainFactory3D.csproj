@@ -3,7 +3,7 @@
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
     <RootNamespace>TerrainFactory.Modules.ThreeD</RootNamespace>
-    <AssemblyName>TerrainFactory3DModule</AssemblyName>
+    <AssemblyName>TerrainFactory3D</AssemblyName>
     <CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>
   </PropertyGroup>
 
