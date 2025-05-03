@@ -43,7 +43,7 @@ namespace TerrainFactory.Modules.ThreeD
 				for (int x = xMin; x <= xMax; x++)
 				{
 					float f = source.GetElevationAtCell(x, y);
-					if (f != source.NoDataValue)
+					if (!ElevationData.IsNoData(f))
 					{
 						Vector3 vec = new Vector3(-x * source.CellSize, source.GetElevationAtCell(x, y), y * source.CellSize);
 						points[x - xMin, y - yMin] = vec;
