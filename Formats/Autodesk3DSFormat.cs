@@ -11,7 +11,7 @@ namespace TerrainFactory.Modules.ThreeD
 	{
 		public override string Identifier => "3DS";
 		public override string ReadableName => "Autodesk 3DS 3D Model";
-		public override string CommandKey => "3ds";
+		public override string Command => "3ds";
 		public override string Description => ReadableName;
 		public override string Extension => "3ds";
 

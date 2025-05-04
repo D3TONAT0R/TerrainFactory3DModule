@@ -12,7 +12,7 @@ namespace TerrainFactory.Modules.ThreeD
 	{
 		public override string Identifier => "PLY";
 		public override string ReadableName => "PLY 3D Model";
-		public override string CommandKey => "ply";
+		public override string Command => "ply";
 		public override string Description => ReadableName;
 		public override string Extension => "ply";
 	}
